@@ -1,5 +1,5 @@
 from flask import Flask, render_template
-
+from sql_queries import TourDB
 app = Flask(__name__)
 
 @app.route("/")
