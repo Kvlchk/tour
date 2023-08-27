@@ -40,3 +40,15 @@ class TourDB:
         data = self.cursor.fetchone()
         self.close()
         return data
+    def add_order(self,*data):
+        self.open()
+        self.cursor.execute('''INSERT INTO orders(name,price,desc,address,image)
+        VALUES((?),(?),(?),(?),(?))''',[*data])
+        self.conn.commit()
+        self.close()
+    def add_comment(self,*data):
+        self.open()
+        self.cursor.execute('''INSERT INTO comments(name,comment)
+        VALUES((?),(?))''',[*data])
+        self.conn.commit()
+        self.close()
