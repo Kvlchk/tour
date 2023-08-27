@@ -27,3 +27,16 @@ class TourDB:
         data = self.cursor.fetchone()
         self.close()
         return data
+    def get_all_comments(self):
+        self.open()
+        self.cursor.execute("SELECT * FROM comments")
+        data = self.cursor.fetchall()
+        self.close()
+        return data
+    
+    def get_comment(self, id):
+        self.open()
+        self.cursor.execute("SELECT * FROM comment WHERE id == (?)", [id])
+        data = self.cursor.fetchone()
+        self.close()
+        return data
