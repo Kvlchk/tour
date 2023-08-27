@@ -19,120 +19,20 @@
 
 <body>
     <div><h1 class="cities_h1">places:</h1></div>
-    <div class="shows_d">
-      <h2 class="shows_dh">Lubart Castle</h2>
-      <h2 class="shows_dh">House with Chimeras</h2>
-      <h2 class="shows_dh">Tunnel of Love</h2>
-    </div>
-    <div class="shows">
-      <div class="shows_i"><img class = "shows_it" src="static/img/castel.png" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/dom.png" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/tun.png" alt=""></div>
-    </div>
-    <div class = "desc">
-      <p class="desc_t">Short Description: Immerse yourself in history at Lubart Castle, a magnificent medieval fortress that echoes with tales of knights and royalty.
-        Location: Located in the heart of Lutsk, Ukraine, Lubart Castle stands as a testament to the country's rich heritage.
-        Entrance Price: Ticket prices vary based on age and guided tour options, offering a memorable experience for every visitor.</p>
-      <p class="desc_t">Short Description: Step into a world of architectural wonder at the House with Chimeras, where artistic design and mythical creatures intertwine.
-        Location: Situated in Kyiv, Ukraine, this masterpiece of Art Nouveau architecture tantalizes visitors with its intriguing façade and history.
-        Entrance Price: Experience the enchanting interior and exterior by purchasing an entrance ticket, granting access to the whimsical world crafted by the architect Vladyslav Gorodetsky.</p>
-      <p class="desc_t">Short Description: Indulge in romance and natural beauty at the Tunnel of Love, a picturesque pathway adorned with a lush, leafy canopy.
-        Location: Nestled in Klevan, Ukraine, this enchanting tunnel is formed by trees, creating a dreamlike passage that captivates couples and nature enthusiasts alike.
-        Entrance Price: The Tunnel of Love welcomes visitors to explore its verdant embrace for free, offering an idyllic escape from the ordinary world.
-        
-        
-        
-        
-        </p>
+    <section class="container card-group  ">
+      {% for item in items  %}
+      <div class="card" style="width: 18rem;">
+        <img src="{{ url_for('static', filename='img/' + item[5]) }}" class="card-img-top" alt="...">
+        <div class="card-body">
+          <h5 card-title>{{item[1]}}</h5>
+          <p class="card-text">{{item[3]}}</p>
+          <p class="card-text">{{item[4]}}</p>
+          <p class="card-text">{{item[2]}}</p>
+        </div>
+      </div>
+      {% endfor %}
+    </section>
 
-
-    </div>
-    <div class="shows_d">
-      <h2 class="shows_dh">Synevir</h2>
-      <h2 class="shows_dh">Svirg Castle</h2>
-      <h2 class="shows_dh">
-        Dniester Canyon</h2>
-    </div>
-    <div class="shows">
-      <div class="shows_i"><img class = "shows_it" src="static/img/synevir.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/svirgcastle.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/dniestercanyon.jpg" alt=""></div>
-    </div>
-    <div class = "desc">
-      <p class="desc_t">Short Description: Discover the breathtaking beauty of Synevyr, a tranquil oasis nestled amidst the Carpathian Mountains, where a pristine lake reflects the majesty of nature.
-        Location: Located in Zakarpattia, Ukraine, Synevyr Lake is a hidden gem that offers a serene escape for travelers seeking solace in the embrace of mountains.
-        Entrance Price: Embrace the serenity by paying a modest entrance fee, granting you access to the ethereal landscapes and the allure of Synevyr.</p>
-      <p class="desc_t">Short Description: Embark on a journey through time at Svirg Castle, a historic fortress that echoes with the tales of medieval life and valor.
-        Location: Situated in Lviv Oblast, Ukraine, Svirg Castle stands as a testament to the region's rich history and architectural legacy.
-        Entrance Price: Unlock the secrets held within the castle walls by obtaining an entrance ticket, allowing you to immerse yourself in the medieval ambiance and grandeur.</p>
-      <p class="desc_t">Short Description: Surrender to the awe-inspiring grandeur of Dniester Canyon, a natural masterpiece where the river has carved its way through the earth, creating breathtaking cliffs and vistas.
-        Location: Winding through Ukraine and Moldova, Dniester Canyon offers a glimpse into the raw beauty of nature and the enduring power of the river.
-        Entrance Price: Experience the captivating landscapes of Dniester Canyon without any entrance fee, allowing you to witness the harmonious marriage of water and rock that time has fashioned.
-        
-        
-        
-        
-        </p>
-        
-
-    </div>
-    <div class="shows_d">
-      <h2 class="shows_dh">
-        Tustan</h2>
-      <h2 class="shows_dh">Tulchyn</h2>
-      <h2 class="shows_dh">
-        Bakota</h2>
-    </div>
-    <div class="shows">
-      <div class="shows_i"><img class = "shows_it" src="static/img/tustan.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/tulchyn.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/bakota.jpg" alt=""></div>
-    </div>
-    <div class = "desc">
-      <p class="desc_t">Short Description: Uncover the mysteries of Tustan, an ancient rock fortress that stands as a testament to human ingenuity and nature's grandeur.
-        Location: Nestled in the Ternopil Oblast of Ukraine, Tustan's rocky outcrops and remnants of stone structures provide a glimpse into a bygone era.
-        Entrance Price: Immerse yourself in the historical ambiance of Tustan by acquiring an entrance pass, granting you access to explore the enigmatic ruins and the surrounding scenic landscapes.</p>
-      <p class="desc_t">Short Description: Step into the past at Tulchyn, a town steeped in history, boasting architectural marvels and a rich cultural tapestry.
-        Location: Situated in the Vinnytsia Oblast of Ukraine, Tulchyn's cobblestone streets and well-preserved structures transport visitors to a bygone era.
-        Entrance Price: Traverse the charming streets and absorb the cultural heritage of Tulchyn without an entrance fee, allowing you to soak in the town's unique charm.</p>
-      <p class="desc_t">Short Description: Surrender to the tranquility of Bakota, a serene reservoir embraced by lush landscapes, offering a sanctuary for relaxation and recreation.
-        Location: Located in the Khmelnytskyi Oblast of Ukraine, Bakota's reservoir and surrounding nature provide an idyllic escape from the hustle and bustle of modern life.
-        Entrance Price: Rejuvenate your senses by visiting Bakota's natural haven; there might be a nominal entrance fee, offering you the chance to unwind amidst nature's beauty.
-        
-        
-        
-        
-        </p>
-        
-
-    </div>
-    <div class="shows_d">
-      <h2 class="shows_dh">Talne</h2>
-      <h2 class="shows_dh">Grotto of Priyma</h2>
-      <h2 class="shows_dh">Myrhorod</h2>
-    </div>
-    <div class="shows">
-      <div class="shows_i"><img class = "shows_it" src="static/img/talne.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/grottoofpriyma.jpg" alt=""></div>
-      <div class="shows_i"><img class = "shows_it" src="static/img/myrhorod.jpg" alt=""></div>
-    </div>
-    <div class = "desc">
-      <p class="desc_t">Short Description: Experience the charm of Talne, a quaint Ukrainian town where history, architecture, and local hospitality intertwine seamlessly.
-        Location: Situated in the Cherkasy Oblast, Talne offers a glimpse into rural life, surrounded by picturesque landscapes and cultural richness.
-        Entrance Price: Wander through Talne's streets and soak in its inviting atmosphere without any entrance fee, making it an accessible destination for those seeking an authentic Ukrainian experience.</p>
-      <p class="desc_t">Short Description: Uncover the secrets of the Grotto of Priyama, a natural wonder hidden beneath the earth's surface, adorned with stunning formations that captivate the imagination.
-        Location: Located in the Kryvyi Rih area of Ukraine, this subterranean marvel invites adventurous souls to explore its intricate passages and unique geological features.
-        Entrance Price: Embark on a journey into the depths of the earth by purchasing an entrance ticket, granting you access to a world sculpted by time and nature.</p>
-      <p class="desc_t">Short Description: Indulge in the therapeutic allure of Myrhorod, a renowned Ukrainian spa town that offers healing mineral waters amidst a backdrop of historical charm.
-        Location: Nestled in the Poltava Oblast, Myrhorod's mineral springs have attracted visitors seeking relaxation and rejuvenation for centuries.
-        Entrance Price: Immerse yourself in the healing properties of Myrhorod's natural springs by opting for a spa experience, with entrance prices varying based on chosen treatments and amenities.
-        
-        
-        
-        </p>
-       
-
-    </div>
     <div><h1 class="cities_h1">
       If you haven't found your favorite place, you can add it.</h1>
       <div class="t_btn"><a class="link_c" href="places_l.html">here</a></div>
