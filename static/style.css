@@ -276,3 +276,25 @@
     margin: 25px;
 
 }
+.rozmriz{
+    width: 324px;
+    height: 250px;
+    
+}
+.comment_h1{
+    text-align:left;
+    vertical-align: top;
+    font-style: unset;
+    padding: 25px;
+    margin: 25px;
+
+}
+.comment_p{
+    text-align:left;
+    vertical-align: top;
+    font-style: unset;
+    padding: 25px;
+    margin: 25px;
+    font-size: 30px;
+
+}

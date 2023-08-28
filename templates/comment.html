@@ -9,26 +9,21 @@
   </head>
   <div class="header_inner_o">
     <div class="logo_o">Tours in Ukraine</div>
-    <nav class="nav">
-        <a class="link_o" href="index.html">Main</a>
-        <a class="link_o" href="places.html">Places</a>
-        <a class="link_o" href="cities.html">Cities</a>
-        <a class="link_o" href="comment.html">Comments</a>
-    </nav>
+    {% include 'menu.html' %}
 </div>
 
 <body>
     <div>
         <h1 class="cities_h1">here you can check comments of another users or leave your own.</h1>
     </div>
-    <div class="t_btn"><a class="link_c" href="comment_l.html">leave a comment</a>
+    <div class="t_btn"><a class="link_c" href="{{ url_for('comment_l') }}">leave a comment</a>
     </div>
     <div>
-        <h1 class="comment_h1">other comments</h1>
+        <h1 class="cities_h1">other comments</h1>
     </div>
     {% for item in items  %}
-    <h2>{{item[1]}}</h2>
-    <p>{{item[2]}}</p>
+    <h2 class="comment_h1">{{item[1]}}</h2>
+    <p class="comment_p">{{item[2]}}</p>
         
     {% endfor %}
     <footer class = "footer">

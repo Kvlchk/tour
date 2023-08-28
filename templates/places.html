@@ -9,20 +9,15 @@
   </head>
   <div class="header_inner_o">
     <div class="logo_o">Tours in Ukraine</div>
-    <nav class="nav">
-        <a class="link_o" href="index.html">Main</a>
-        <a class="link_o" href="places.html">Places</a>
-        <a class="link_o" href="cities.html">Cities</a>
-        <a class="link_o" href="comment.html">Comments</a>
-    </nav>
+    {% include 'menu.html' %}
 </div>
 
 <body>
     <div><h1 class="cities_h1">places:</h1></div>
     <section class="container card-group  ">
       {% for item in items  %}
-      <div class="card" style="width: 18rem;">
-        <img src="{{ url_for('static', filename='img/' + item[5]) }}" class="card-img-top" alt="...">
+      <div class="card" style="min-width: 18rem;">
+        <img src="{{ url_for('static', filename='img/' + item[5]) }}" class="rozmriz" alt="...">
         <div class="card-body">
           <h5 card-title>{{item[1]}}</h5>
           <p class="card-text">{{item[3]}}</p>
@@ -35,7 +30,7 @@
 
     <div><h1 class="cities_h1">
       If you haven't found your favorite place, you can add it.</h1>
-      <div class="t_btn"><a class="link_c" href="places_l.html">here</a></div>
+      <div class="t_btn"><a class="link_c" href="{{ url_for('places_l') }}">here</a></div>
       </div>
     <footer class = "footer">
         <h3 class="footer_text">created by Kiril Kovalchuk</h3>
