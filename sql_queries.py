@@ -40,9 +40,9 @@ class TourDB:
         data = self.cursor.fetchone()
         self.close()
         return data
-    def add_order(self,*data):
+    def add_place(self,*data):
         self.open()
-        self.cursor.execute('''INSERT INTO orders(name,price,desc,address,image)
+        self.cursor.execute('''INSERT INTO places(name,price,desc,address,image)
         VALUES((?),(?),(?),(?),(?))''',[*data])
         self.conn.commit()
         self.close()

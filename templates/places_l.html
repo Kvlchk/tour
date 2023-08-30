@@ -14,7 +14,7 @@
 <body>
   <h1 class="cities_h1">Add your own place!</h1>
   <div class = "form_p">
-    <form action="" method="post">
+    <form action="" method="post" enctype="multipart/form-data">
       <div class="mb-3">
           <label  class="form-label">ENTER PLACE NAME</label>
           <input required name ="name" type="text" class="form-control" id="exampleFormControlInput1">
@@ -33,7 +33,7 @@
       </div>
       <div class="mb-3">
         <label for="formFile" class="form-label">CHOOSE A PHOTO OF THE PLACE</label>
-        <input class="form-control" type="file" id="formFile">
+        <input name="image" class="form-control" type="file" id="formFile">
       </div>
       <button type="submit" class="btn btn-dark">SEND INFORMATION</button>
     </form>
